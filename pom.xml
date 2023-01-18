@@ -220,7 +220,7 @@
  <distributionManagement>
     <snapshotRepository>
       <id>maven-snapshots</id>
-      <url>http://ec2-43-205-241-134.ap-south-1.compute.amazonaws.com:8081/repository/maven-snapshots/</url>
+      <url>http://ec2-3-109-54-194.ap-south-1.compute.amazonaws.com:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
  </distributionManagement>
 </project>
