@@ -216,6 +216,10 @@
 
   <prerequisites>
     <maven>3.0.3</maven>
+    <mvn clean verify sonar:sonar \>
+     <Dsonar.projectKey>helloworld </Dsonar.projectKey>
+     <Dsonar.host.url>http://ec2-3-110-120-180.ap-south-1.compute.amazonaws.com:9000/</Dsonar.host.url>
+     <Dsonar.login>sqp_b68db0e00d15c58ecb65c3918b86159f3c87bb42</Dsonar.login>      
   </prerequisites>
  <distributionManagement>
     <snapshotRepository>
