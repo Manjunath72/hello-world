@@ -12,6 +12,9 @@
   <url>http://www.example.com</url>
 
   <properties>
+    <sonar.projectKey>=helloworld </sonar.projectKey>
+    <sonar.host.url>=http://ec2-3-110-120-180.ap-south-1.compute.amazonaws.com:9000/</sonar.host.url>
+    <sonar.login>=sqp_b68db0e00d15c58ecb65c3918b86159f3c87bb42</sonar.login>        
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
   </properties>
@@ -215,11 +218,7 @@
   </scm>
 
   <prerequisites>
-    <maven>3.0.3</maven>
-    <mvn clean verify sonar:sonar \>
-     <Dsonar.projectKey>=helloworld </Dsonar.projectKey>
-     <Dsonar.host.url>=http://ec2-3-110-120-180.ap-south-1.compute.amazonaws.com:9000/</Dsonar.host.url>
-     <Dsonar.login>=sqp_b68db0e00d15c58ecb65c3918b86159f3c87bb42</Dsonar.login>      
+    <maven>3.0.3</maven>  
   </prerequisites>
  <distributionManagement>
     <snapshotRepository>
