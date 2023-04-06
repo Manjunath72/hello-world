@@ -8,7 +8,7 @@ pipeline{
     stages{
         stage("git check"){
             steps{
-                git credentialsId: 'git_id', url: 'https://github.com/sasigowda/hello-world'
+                git credentialsId: 'git_id', url: 'https://github.com/Manjunath72/hello-world.git'
             }           
         }
         stage("maven build"){
@@ -20,9 +20,9 @@ pipeline{
             steps{
                  sshagent(['tomcat_deploy']) {
                 sh """
-                    scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@172.31.38.119:/opt/tomcat/webapps/
-                    ssh ec2-user@172.31.38.119 /opt/tomcat/bin/startup.sh
-                    ssh ec2-user@172.31.38.119 /opt/tomcat/bin/shutdown.sh
+                    scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@172.31.44.95:/opt/tomcat/webapps/
+                    ssh ec2-user@172.31.44.95 /opt/tomcat/bin/startup.sh
+                    ssh ec2-user@172.31.44.95 /opt/tomcat/bin/shutdown.sh
 
                 """
                 }
