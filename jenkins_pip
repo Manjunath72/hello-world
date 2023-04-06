@@ -18,14 +18,14 @@ pipeline{
         }
         stage("deploy to tomcat server"){
             steps{
-                 
+                sshagent(['newkeypair']) {
                 sh """
                     scp -o StrictHostKeyChecking=no webapp/target/webapp.war @ec2-13-127-32-97.ap-south-1.compute.amazonaws.com:8080/:/opt/tomcat/webapps/
                     ssh ec2-13-127-32-97.ap-south-1.compute.amazonaws.com:8080/ /opt/tomcat/bin/startup.sh
                     ssh ec2-13-127-32-97.ap-south-1.compute.amazonaws.com:8080/ /opt/tomcat/bin/shutdown.sh
 
                 """
-                
+              }  
             }
         }
         stage("sharing artifactory to docker server"){
